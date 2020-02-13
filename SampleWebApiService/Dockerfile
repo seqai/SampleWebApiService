@@ -11,7 +11,6 @@ COPY ["SampleWebApiService/SampleWebApiService.csproj", "SampleWebApiService/"]
 RUN dotnet restore "SampleWebApiService/SampleWebApiService.csproj"
 COPY . .
 WORKDIR "/src/SampleWebApiService"
-RUN mdkdir db
 RUN dotnet build "SampleWebApiService.csproj" -c Release -o /app/build
 
 FROM build AS publish

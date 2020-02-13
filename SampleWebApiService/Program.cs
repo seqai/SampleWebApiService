@@ -28,7 +28,6 @@ namespace SampleWebApiService
             try
             {
                 Log.Information("Starting web host");
-                Log.Information(Log.Logger.GetHashCode().ToString());
                 CreateHostBuilder(args).Build().Run();
                 return 0;
             }
